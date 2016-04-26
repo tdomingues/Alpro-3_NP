@@ -130,4 +130,24 @@ public class Arvore {
 
     }
 
+    public List<Integer> folhas() {
+        List<Integer> resposta = new ArrayList<>();
+        folhas0(raiz, resposta);
+        return resposta;
+
+    }
+
+    private void folhas0(Nodo nodo, List<Integer> resposta) {
+        if (nodo == null) {
+            return;
+        }
+        if (nodo.direito == null && nodo.esquerdo == null) {
+            resposta.add(nodo.chave);
+            return;
+        }
+        folhas0(nodo.esquerdo, resposta);
+        folhas0(nodo.direito, resposta);
+
+    }
+
 }

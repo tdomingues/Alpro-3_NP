@@ -10,9 +10,9 @@ package pucrs.tree;
  * @author 11204785
  */
 public class Hello {
-    
+
     public static void main(String[] args) {
         System.out.println("Teste Github");
     }
-    
+
 }
